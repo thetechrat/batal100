@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <meta
+      name="google-signin-client_id"
+      content="126104823506-en8mm0l5efr9a7mhdbh0vjodpo9sn5k6.apps.googleusercontent.com"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <title>RAFFLE</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="page-header">
+        <h1>Whitelist Raffle</h1>
+        <div class="g-signin2" data-onsuccess="onSignIn"></div>
+        <a href="#" onclick="signOut();">Sign out</a>
+      </div>
+      <main>
+        <div class="row">
+          <div class="col-xs-12 col-md-5">
+            <h2>Enter choices</h2>
+            <p>Enter each value on a new line. Blank lines will be ignored.</p>
+            <div class="entries" id="entry"></div>
+          </div>
+          <div class="col-xs-12 col-md-5 col-md-offset-2">
+            <h2>Your Winner:</h2>
+            <p id="instructions">
+              <span class="label label-warning"
+                >You have to enter some values first!</span
+              >
+            </p>
+            <div id="results"></div>
+            <div id="chooser" class="text-center">
+              <hr />
+              <button type="button" class="btn btn-success btn-lg">
+                Pick Winner
+              </button>
+            </div>
+          </div>
+        </div>
+        <br />
+        <form action="">
+          <input
+            type="text"
+            name="Discord"
+            id="discord"
+            placeholder="Enter your Discord ID"
+          />
+          <input
+            onclick="enter();"
+            class="raffle-btn"
+            type="button"
+            value="Enter Raffle"
+            id="enter"
+          />
+        </form>
+        <p class="text-center text-muted">
+          Drawing, giveaway, random generation - nothing can be easier than just
+          pressing the button!
+        </p>
+      </main>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
